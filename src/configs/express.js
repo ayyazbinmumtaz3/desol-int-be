@@ -5,8 +5,7 @@ import { AuthRoutes, CarRoutes } from "../routes/index.js";
 
 const app = express();
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://desol-int-fe.vercel.app/'],
-    credentials: true,
+    origin: '*',
 }));
 
 
