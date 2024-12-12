@@ -4,9 +4,12 @@ import express from 'express';
 import { AuthRoutes, CarRoutes } from "../routes/index.js";
 
 const app = express();
+app.use(cors({
+    origin: process.env.VERCEL_URL,
+    credentials: true,
+}));
 
 app.use(express.json({ limit: '50mb' }));
-app.use(cors());
 
 const PORT = process.env.PORT ?? 3000;
 
