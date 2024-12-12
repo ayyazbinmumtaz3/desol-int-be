@@ -11,7 +11,6 @@ export const generateAccessToken = (data, res) => {
         httpOnly: true,
         sameSite: "strict",
         secure: process.env.NODE_ENV !== "development",
-        signed: true,
     })
 
     return { accessToken };
