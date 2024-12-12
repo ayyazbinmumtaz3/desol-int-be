@@ -5,8 +5,7 @@ import { AuthRoutes, CarRoutes } from "../routes/index.js";
 
 const app = express();
 app.use(cors({
-    origin: 'https://desol-int-fe.vercel.app',
-    credentials: true,
+    origin: '*',
 }));
 
 app.use(express.json({ limit: '50mb' }));
